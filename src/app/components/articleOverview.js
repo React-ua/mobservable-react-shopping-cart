@@ -41,9 +41,9 @@ export default class ArticleOverview extends React.Component {
 		return articles.filter(article => {
 			switch (this.props.viewModel.articleFilter) {
 				case ViewModel.ACTIVE_ARTICLES:
-					return !article.completed;
-				case ViewModel.COMPLETED_ARTICLES:
-					return article.completed;
+					return article.inStock;
+				case ViewModel.SOLDOUT_ARTICLES:
+					return !article.inStock;
 				case ViewModel.LAST_ARTICLES:
 					return article == last;
 				default:

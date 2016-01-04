@@ -2,47 +2,56 @@ import React from 'react';
 import {observer} from 'mobservable-react';
 import {pluralize} from '../utils';
 import * as ViewModel from '../stores/viewModel';
+var cx = require('classnames');
 
 @observer
 export default class ArticleFooter extends React.Component {
 	render() {
 		const shopModel = this.props.shopModel;
 		if (!shopModel.activeArticleCount && !shopModel.soldOut)
-			return null;
-
-		const activeArticleWord = pluralize(shopModel.activeArticleCount, 'item');
+		return null;
 
 		return (
 			<footer className="footer">
-				<span className="todo-count">
-					<strong>{shopModel.activeArticleCount}</strong> {activeArticleWord} left
-				</span>
-				<ul className="filters">
+				<div className="ui menu">
+					<div className="ui labeled button" tabindex="0">
+						<div className="ui red button">
+							<i className="Shop icon"></i> In stock
+							</div>
+							<a className="ui basic red right pointing label">
+								{shopModel.activeArticleCount}
+							</a>
+
+						</div>
+
 						{this.renderFilterLink(ViewModel.ALL_ARTICLES, "", "All")}
 						{this.renderFilterLink(ViewModel.ACTIVE_ARTICLES, "active", "Active")}
 						{this.renderFilterLink(ViewModel.LAST_ARTICLES, "last", "Last")}
-						{this.renderFilterLink(ViewModel.COMPLETED_ARTICLES, "completed", "completed")}
-				</ul>
-				{ shopModel.soldOut === 0
-					? null
-					: 	<button
-							className="clear-completed"
+						{this.renderFilterLink(ViewModel.SOLDOUT_ARTICLES, "soldout", "SoldOut")}
+						{ shopModel.soldOut === 0
+							? null
+							: 	<a
+							className="item"
 							onClick={this.clearSoldOut}>
-							Clear completed
-						</button>
-				}
+							Clear soldOut
+						</a>
+					}
+				</div>
+
 			</footer>
 		);
 	}
 
 	renderFilterLink(filterName, url, caption) {
-		return (<li>
+		let className = cx("item", {active: (filterName ===  this.props.viewModel.articleFilter) });
+		console.log(className);
+		return (
+
 			<a href={"#/" + url}
-				className={filterName ===  this.props.viewModel.articleFilter ? "selected" : ""}>
+				className={className}>
 				{caption}
 			</a>
-			{' '}
-		</li>)
+		)
 	}
 
 	clearSoldOut = () => {

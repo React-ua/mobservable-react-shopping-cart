@@ -18,24 +18,31 @@ export default class ShoppingApp extends React.Component {
 				<div className="column" >
 					<header className="header">
 						<h1>ShoppingApp</h1>
+
 						<ArticleEntry shopModel={shopModel} />
 					</header>
 				</div>
+				<div className="ui horizontal divider">
+	shopping list
+</div>
+					<div className="ui raised very paded segment">
 				<div className="column  row">
 					<div className="column" >
+						<p>Double-click to edit a article</p>
 						<ArticleOverview shopModel={shopModel} viewModel={viewModel} shoppingCart={shoppingCart} />
 						<ArticleFooter shopModel={shopModel} viewModel={viewModel} />
-						<footer>
-							<p>Double-click to edit a article</p>
-						</footer>
+
 					</div>
 				</div>
-				<div className="column  row">
+				</div>
+				<div className="ui right floated compact segment">
+				<div className="column row">
 					<div className="column" >
 						<h3>Your shopping cart</h3>
 						<CartView cart={shoppingCart} />
 					</div>
 				</div>
+			</div>
 			</div>
 		);
 	}
@@ -46,8 +53,8 @@ export default class ShoppingApp extends React.Component {
 		var router = Router({
 			'/': function() { viewModel.articleFilter = ViewModel.ALL_ARTICLES; },
 			'/active': function() { viewModel.articleFilter = ViewModel.ACTIVE_ARTICLES; },
-			'/completed': function() { viewModel.articleFilter = ViewModel.COMPLETED_ARTICLES; },
-			'/last': [function() { console.log("Hello new");}, function() { viewModel.articleFilter = ViewModel.LAST_ARTICLES; }]
+			'/soldout': function() { viewModel.articleFilter = ViewModel.SOLDOUT_ARTICLES ; },
+			'/last': [function() { viewModel.articleFilter = ViewModel.LAST_ARTICLES; }]
 		});
 		// Instantiate the router.
 		router.init('/');

@@ -2,7 +2,7 @@ import {extendObservable} from 'mobservable';
 
 export const ALL_ARTICLES = 'all';
 export const ACTIVE_ARTICLES = 'active';
-export const SOLDOUT_ARTICLES  = 'completed';
+export const SOLDOUT_ARTICLES  = 'soldout';
 export const LAST_ARTICLES  = 'last';
 
 

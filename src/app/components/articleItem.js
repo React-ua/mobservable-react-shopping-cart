@@ -17,7 +17,10 @@ export default class ArticleItem extends React.Component {
 		return (
 			<tr >
 				<td className="collapsing">
-					<a className="ui tag black label" onClick = {this.handleToggle}>Buy</a>
+					{ article.inStock? <a className="ui tag black label " onClick = {this.handleToggle}>Buy</a> : <a className="ui tag black label disabled" >Buy</a>
+
+					}
+
 				</td>
 				<td>  <label onDoubleClick={this.handleEdit}>
 					{article.name}

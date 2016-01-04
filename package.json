@@ -1,0 +1,43 @@
+{
+  "name": "mobservable-react-shopping-cart",
+  "version": "1.0.0",
+  "description": "Shopping application with Mobservable + React project with JSX, ES6 compilation and hot code reloading",
+  "scripts": {
+    "start": "node server.js",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/React-ua/mobservable-react-shopping-cart.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "semantic-ui",
+    "mobservable",
+    "shopping"
+  ],
+  "author": "jeblister <jelister@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/React-ua/mobservable-react-shopping-cart.git/issues"
+  },
+  "homepage": "https://github.com/React-ua/mobservable-react-shopping-cart/wiki",
+  "devDependencies": {
+    "babel-core": "^5.4.7",
+    "babel-eslint": "^3.1.9",
+    "babel-loader": "^5.1.2",
+    "eslint-plugin-react": "^2.3.0",
+    "mobservable-react-devtools": "^2.0.1",
+    "react-hot-loader": "^1.2.7",
+    "webpack": "^1.9.6",
+    "webpack-dev-server": "^1.8.2"
+  },
+  "dependencies": {
+    "director": "1.2.8",
+    "mobservable": "^1.0.0",
+    "mobservable-react": "^2.0.0",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0"
+  }
+}

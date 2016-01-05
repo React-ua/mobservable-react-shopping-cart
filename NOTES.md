@@ -36,10 +36,10 @@ src/
 ---- cart/                        // Cart Component
 ---- article/                      //  product Component
 
----- stores/
+---stores/
 ------  shopModel.js             // Product Store
 ------  viewModel.js.js          // view Store
----- utils.js                    // some utils : id generator, local storage ..
+---utils.js                    // some utils : id generator, local storage ..
 index.html
 server.js
 package.json

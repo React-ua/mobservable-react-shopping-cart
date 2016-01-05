@@ -65,3 +65,36 @@ for developpement modules, we will using :
 
 We can run `npm install` to install all of our dependencies, and then use the `npm start` command to start a process that watches our project and bundles our source on save.
 
+# shop Model : Article
+
+In the interests of keeping us focused on React, we will be using a simple data model for our articles (products) that we are going to display. 
+
+Lets have a look at what our article model looks like :
+```
+class Article {
+	constructor(store,id, name, price, inStock) {
+			this.store = store;
+			this.id = id;
+			this.name = name;
+			this.price = price;
+			this.inStock = inStock;
+	}
+
+	setName(name) {
+		this.name = name;
+	}
+
+	toJson() {
+		return {
+			id: this.id,
+			name: this.name,
+			price: this.price,
+			inStock: this.inStock
+		};
+	}
+
+	static fromJson(store, json) {
+		return new Article(store, json.id, json.name, json.price, json.inStock);
+	}
+}
+```

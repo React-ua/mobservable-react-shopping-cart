@@ -22,4 +22,27 @@ Our first step to architecting an application is defining what it should do. We 
 
 This is what our finished product should look like:
 
+### Directory Structure
+
+
+Below, check out our `package.json` file. We will be using the following modules:
+
+*   classnames": "2.2.2"
+*   "director": "1.2.8"
+*   "mobservable": "^1.0.0"
+*   "mobservable-react": "^2.0.0"
+*   "react": "^0.14.0"
+*   "react-dom": "^0.14.0"
+
+for developpement modules, we will using :
+* "babel-core": "^5.4.7"
+* "babel-eslint": "^3.1.9"
+* "babel-loader": "^5.1.2"
+* "eslint-plugin-react": "^2.3.0"
+* "mobservable-react-devtools": "^2.0.1"
+* "react-hot-loader": "^1.2.7"
+* "webpack": "^1.9.6"
+* "webpack-dev-server": "^1.8.2"
+
+We can run `npm install` to install all of our dependencies, and then use the `npm start` command to start a process that watches our project and bundles our source on save.
 

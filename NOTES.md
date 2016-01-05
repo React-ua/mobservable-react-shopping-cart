@@ -1,4 +1,4 @@
-#introduction
+# Introduction
 
 Welcome to the this sute of the **Learning React** series! Up to this point, we’ve learned how React’s API allows us to create rich stateful components, how to use them in practice, how Facebook’s Flux architecture works & how to make your objects and functions (or React components) reactive.
 

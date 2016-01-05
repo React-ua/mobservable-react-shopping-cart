@@ -24,7 +24,26 @@ This is what our finished product should look like:
 
 ### Directory Structure
 
+```
+src/
+--index.js                         // Main application
+--app/  
+---css/
+---- index.css
+---actions/
+---- FluxCartActions.js           // Our app's action creators
+---components/
+---- cart/                        // Cart Component
+---- article/                      //  product Component
 
+---- stores/
+------  shopModel.js             // Product Store
+------  viewModel.js.js          // view Store
+---- utils.js                    // some utils : id generator, local storage ..
+index.html
+server.js
+package.json
+```
 Below, check out our `package.json` file. We will be using the following modules:
 
 *   classnames": "2.2.2"

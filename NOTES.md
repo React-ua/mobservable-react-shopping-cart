@@ -1,3 +1,4 @@
+![](https://raw.githubusercontent.com/loverajoel/jstips/master/resources/jstips-header-blog.gif)
 # Introduction
 
 Welcome to the this sute of the **Learning React** series! Up to this point, we’ve learned how React’s API allows us to create rich stateful components, how to use them in practice, how Facebook’s Flux architecture works & how to make your objects and functions (or React components) reactive.
@@ -7,7 +8,7 @@ Today we are going to put all of it together to create a basic shopping cart app
 Our first step to architecting an application is defining what it should do. We want to:
 
 *   Add product to the store with some options
-*   Display a product 
+*   Display a product
 *   Change the price when selecting an option
 *   Change the product options in the store
 *   Display the number of items in the store
@@ -67,7 +68,7 @@ We can run `npm install` to install all of our dependencies, and then use the `n
 
 # shop Model : Article
 
-In the interests of keeping us focused on React, we will be using a simple data model for our articles (products) that we are going to display. 
+In the interests of keeping us focused on React, we will be using a simple data model for our articles (products) that we are going to display.
 
 Lets have a look at what our article model looks like :
 ```

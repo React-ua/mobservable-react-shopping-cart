@@ -32,7 +32,8 @@ export class ShopModel {
 	}
 
 	addArticle (name, price, inStock = true ) {
-		this.articles.push(new Article(this, Utils.uuid(), name, price, inStock));
+		let arr = this.articles;
+		arr[arr.length] = new Article(this, Utils.uuid(), name, price, inStock); // Add a element at the end of the array is easy with push(), but this way is more performant.
 	}
 
 	toggleAll (checked) {
